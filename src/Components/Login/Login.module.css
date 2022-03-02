@@ -16,6 +16,7 @@ background-size: cover;
 .forms {
     max-width: 40rem;
     padding: 2rem;
+    margin-top: 20vh;
 }
 
 @media (max-width: 50rem){
