@@ -13,11 +13,17 @@ const UserStatsGraphs = ({ data }) => {
         y: Number(item.acessos),
       };
     });
+      if(data.length !== 0) {
+        setTotal(
+          data.map(({ acessos }) => Number(acessos)).reduce((a, b) => a + b)
+        );
+        setGraph(graphData);
+      } else {
+        setTotal(null);
+      }
+      
 
-    setTotal(
-      data.map(({ acessos }) => Number(acessos)).reduce((a, b) => a + b)
-    );
-    setGraph(graphData);
+
   }, [data]);
 
   return (

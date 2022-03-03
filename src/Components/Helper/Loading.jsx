@@ -19,7 +19,7 @@ const Loading = () => {
 
   function displayStep(i) {
     return {
-      display: step == i ? 'block' : 'none'
+      display: step === i ? 'block' : 'none'
     }
   }
 
